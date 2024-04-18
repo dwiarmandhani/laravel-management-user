@@ -1,3 +1,42 @@
+# Versi Laravel
+10.2.5
+
+# Instalasi
+Berikut adalah langkah-langkah untuk menginstal dan menjalankan proyek ini secara lokal. Pastikan Anda memiliki PHP, Composer, dan MySQL atau database yang sesuai diinstal di komputer Anda sebelum melanjutkan.
+
+1. Clone Repository: git clone https://github.com/dwiarmandhani/laravel-management-user.git
+2. Masuk Direktori cd nama-repositori
+3. Install Dependencies composer install
+4. Salin File ENV cp .env.example .env
+5. Config ENV Buka file .env dan atur pengaturan database sesuai dengan lingkungan lokal Anda (nama database, pengguna, kata sandi, dll.). Konfikurasi saya: DB_CONNECTION=mysql DB_HOST=127.0.0.1 DB_PORT=3306 DB_DATABASE=manage_user DB_USERNAME=root DB_PASSWORD=
+6. Generate Key Aplikasi php artisan key:generate
+7. Jalankan Migrasi dan Seeder php artisan migrate --seed
+8. Jalankan Server Lokal php artisan serve
+
+# ENDPOINT
+Anda dapat download postman collection kemudian mengimport di Postman untuk pengetesan.
+File : postman_collection/Management User.postman_collection.json
+
+**1. Register User**
+POST http://localhost:8000/api/register
+**2. Login**
+POST http://localhost:8000/api/login
+**3. Logout**
+POST http://localhost:8000/api/logout
+**4. Get All User**
+GET http://localhost:8000/api/users
+**5. Create User**
+POST http://localhost:8000/api/users/create
+**6. Change Password**
+POST http://localhost:8000/api/users/change-password
+**7. Edit User**
+PUT http://localhost:8000/api/users/{id}
+**8. Delete User**
+DELETE http://localhost:8000/api/users/{id}
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
