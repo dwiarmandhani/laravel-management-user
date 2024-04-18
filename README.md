@@ -17,21 +17,21 @@ Berikut adalah langkah-langkah untuk menginstal dan menjalankan proyek ini secar
 Anda dapat download postman collection kemudian mengimport di Postman untuk pengetesan.
 File : postman_collection/Management User.postman_collection.json
 
-**1. Register User**
+## Register User
 POST http://localhost:8000/api/register
-**2. Login**
+## Login
 POST http://localhost:8000/api/login
-**3. Logout**
+## Logout
 POST http://localhost:8000/api/logout
-**4. Get All User**
+## Get All User
 GET http://localhost:8000/api/users
-**5. Create User**
+## Create User
 POST http://localhost:8000/api/users/create
-**6. Change Password**
+## Change Password
 POST http://localhost:8000/api/users/change-password
-**7. Edit User**
+## Edit User
 PUT http://localhost:8000/api/users/{id}
-**8. Delete User**
+## Delete User
 DELETE http://localhost:8000/api/users/{id}
 
 
