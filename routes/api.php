@@ -23,5 +23,7 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/users/create', [App\Http\Controllers\Api\UserController::class, 'create']);
     Route::get('/users', [App\Http\Controllers\Api\UserController::class, 'index']);
     Route::post('/users/change-password', [App\Http\Controllers\Api\UserController::class, 'changePassword']);
+    Route::delete('/users/{id}', [App\Http\Controllers\Api\UserController::class, 'delete']);
+    Route::put('/users/{id}', [App\Http\Controllers\Api\UserController::class, 'update']);
 });
 Route::post('/logout', App\Http\Controllers\Api\LogoutController::class)->name('logout');
